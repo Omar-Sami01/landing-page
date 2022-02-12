@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Project 3</title>
+   
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+   <script src="https://kit.fontawesome.com/6e93e520cf.js" crossorigin="anonymous"></script>
+   <style>
+      body{
+         background-color: #eeeeee;
+         font-family:Arial, Helvetica, sans-serif;
+         font-size: 17px;
+         color:black;
+      }
+      #header{
+         background-color: #eeeeee;
+         width:100vw;
+         height:80px;
+      }
+      /* =================== Icon and name ============== */
+      header i{
+         position: fixed;
+         top:10px;
+         left:10px;
+         z-index:10;
+         font-size: 100px;
+         filter:invert(1);
+         color: rgb(68, 71, 231);
+      }
+      h5{
+         position: fixed;
+         top:10px;
+         left:20px;
+         z-index:20;
+         font-family: 'Pacifico', cursive;
+         font-size: 30px;
+      }
+      h5:hover{
+         transition-duration: .7s;
+         transition-timing-function: ease-in-out;
+         transform: rotate(-15deg);
+      }
+      /* =================== Top Nav-bar ============== */
+      #nav-bar{
+         position: fixed;
+         top:0;
+         display: flex;
+         flex-direction: row-reverse;
+         width:100vw;
+         height:80px;
+         background-color: #eeeeee;
+      }
+      #nav-bar a{
+         margin:40px 100px 0 0;
+         background-color: #eeeeee;
+         text-decoration: none;
+         color: black;
+      } 
+      h1{ 
+         font-family: 'Pacifico', cursive;
+         font-size: 40px;
+         margin: 80px 0 20px 0;
+         text-align: center;
+      }
+
+      /* =============================== form ================== */
+      form{
+         background-color: #eeeeee;
+      }
+      form input{
+         display:block;
+         width: 20vw;
+         min-width:20em;
+         left:40vw;
+         height:1.7em;
+         margin: auto;
+         margin-bottom: 15px;
+      }
+      #submit{
+         display:block;
+         width: 7vw;
+         min-width:10em;
+         height:2.5em;
+         font-size: 17px;
+         margin: auto;
+         background-color: #f1c40f;
+         border:none;
+         font-weight:800;
+      }
+      #submit:hover{
+         background-color: #ffdc4e;
+         transform: scale(1.1);
+         transition-duration: .7s;
+         transition-timing-function: ease-in-out;
+      }
+      /* =============================== section - quality  ================== */
+      #quality{
+         width: 60vw;
+         margin: 60px 0 0 20vw;
+      }
+      section i{
+         font-size: 60px;
+         color: #bbb818;
+         margin: 20px;
+      }
+      #handcraft {
+         display: block;
+         margin: auto;
+         margin: 0 0 20px 0;
+         display: flex;
+      }
+      #materials {
+         display: block;
+         margin: auto;
+         margin: 0 0 20px 0;
+         display: flex;
+      }
+      #shipping {
+         display: block;
+         margin: auto;
+         margin: 0 0 20px 0;
+         display: flex;
+      }
+
+
+      /* =============================== section - Video ================== */
+      #video{
+         display: block;
+         background-color: #eeeeee;
+         margin:auto;
+         margin-top: 50px;
+         width: 560px; 
+         height: 315px;
+      }
+
+      /* =============================== section - selection ================== */
+      #selection{
+         display: flex;
+         justify-content: center; 
+         margin: 50px 0 50px 0;
+      }
+      #classic, #electric, #base {
+         display: flex;
+         flex-direction: column;
+         padding: 1rem;
+         justify-content: space-between;
+         width:250px;
+         /* height:310px; */
+         height: auto;
+         border: solid 2px black;
+         text-align: center;
+         margin: 0 10px 0 10px;
+      }
+      #selection h3{
+         top:0;
+         padding: 10px;
+         background-color: #e2dede;
+      }
+      #select-button{
+         display:block;
+         width: 7vw;
+         min-width:10em;
+         height:2.5em;
+         font-size: 17px;
+         margin: auto;
+         background-color: #f1c40f;
+         border:none;
+         font-weight:800;
+         flex-shrink: 0;
+      }
+      /* =============================== Footer ================== */
+      #nav-footer{
+         display: flex;
+         justify-content: flex-end;
+         width: 60vw;
+         min-width:700px;
+         max-width: 900px;
+         margin: auto;
+         padding: 2em 0;
+         background-color: #e2dede;
+      }
+      #nav-footer a {
+         margin: 0 40px 0 0;
+         text-decoration: none;
+         color: black;
+      }
+      footer h3{
+         bottom: 5px;
+         font-size: 14px;
+         float: right;
+         margin-right: 80px;
+      }
+      @media (max-width: 600px) { 
+         #video{
+         display: block;
+         background-color: #eeeeee;
+         margin:auto;
+         margin-top: 50px;
+         width: 360px; 
+         height: 202px;
+         }
+         header i{
+         position: fixed;
+         top:60px;
+         left:10px;
+         z-index:10;
+         font-size: 100px;
+         filter:invert(1);
+         color: rgb(68, 71, 231);
+         }
+         #nav-bar a{
+         margin:40px 20px 0 0;
+         background-color: #eeeeee;
+         text-decoration: none;
+         color: black;
+         }
+         h1{ 
+         font-family: 'Pacifico', cursive;
+         font-size: 30px;
+         margin: 80px 0 20px 0;
+         text-align: center;
+         }
+
+      }
+
+      
+   </style>
+</head>
+
+<body>
+   <header id='header'>
+      <!-- ============================================================ -->
+      <img id='header-img' src='' alt=''/>
+      <i id='header-img2' class="fas fa-guitar"></i>
+      <h5>My Guitar</h5>
+      <nav id='nav-bar'>
+         <a class='nav-link' href='#selection'>Pricing</a>
+         <a class='nav-link' href='#video'>How It Works</a>
+         <a class='nav-link' href='#handcraft'>Features</a>
+      </nav>
+   </header>
+   <main>
+      <h1>Top Hand Crafted Guitars</h1>
+      <form id='form' action='https://www.freecodecamp.com/email-submit'>
+         <!-- <label for='email'>Email</label> -->
+         <input type='email' id='email' value='' name='email' placeholder='Enter email address' required/>
+         <button type='submit' id='submit' >JOIN US</button>
+      </form>
+      <section id='quality'>
+         <div id='handcraft'>
+            <div>
+               <i class="fas fa-hands"></i>
+            </div>
+            <div>
+               <h3>
+                  Uniquely Handcrafted
+               </h3>
+               <p>
+                  Lorem ex ut eiusmod sit commodo cillum. Sunt eiusmod minim dolore nisi laboris irure do. 
+                  Anim ea proident velit ex Lorem incididunt magna deserunt aliqua non quis cupidatat. 
+               </p>
+            </div>
+         </div>
+         <div id='materials'>
+            <div>
+               <i class="fas fa-microscope"></i>
+            </div>
+            <div>
+               <h3>
+                  Advanced Materials
+               </h3>
+               <p>
+                  Lorem ex ut eiusmod sit commodo cillum. Sunt eiusmod minim dolore nisi laboris irure do. 
+                  Anim ea proident velit ex Lorem incididunt magna deserunt aliqua non quis cupidatat. 
+               </p>
+            </div>
+         </div>
+         <div id='shipping'>
+            <div>
+               <i class="fas fa-award"></i>
+            </div>
+            <div>
+               <h3>
+                  Quality Guaranteed
+               </h3>
+               <p>
+                  Lorem ex ut eiusmod sit commodo cillum. Sunt eiusmod minim dolore nisi laboris irure do. 
+                  Anim ea proident velit ex Lorem incididunt magna deserunt aliqua non quis cupidatat. 
+               </p>
+            </div>
+         </div>
+
+      </section>
+
+      <section>
+         <!-- <iframe id='video' width="560" height="315" src="https://www.youtube.com/embed/CVHnsH5m_Tk"></iframe> -->
+         <iframe id='video' src="https://www.youtube.com/embed/CVHnsH5m_Tk"></iframe>
+
+      
+      </section>
+
+      <section id='selection'>
+         <div id='classic'>
+            <h3>CLASSIC GUITAR</h3>
+            <H4>$300</H4>
+            <P>Duis esse labore et ut anim non laborum anim qui ipsum est incididunt do ipsum. 
+               Do veniam ex anim irure cillum quis consequat ad irure ex velit cupidatat incididunt. 
+            </P>
+            <button id='select-button' type='button'>SELECT</button>
+         </div>
+         <div id='electric'>
+            <h3>ELECTRIC GUITAR</h3>
+            <H4>$500</H4>
+            <P>Duis esse labore et ut anim non laborum anim qui ipsum est incididunt do ipsum. 
+               Do veniam ex anim irure cillum quis consequat ad irure ex velit cupidatat incididunt. 
+            </P>
+            <button id='select-button' type='button'>SELECT</button>
+         </div>
+         <div id='base'>
+            <h3>BASE GUITAR</h3>
+            <H4>$600</H4>
+            <P>Duis esse labore et ut anim non laborum anim qui ipsum est incididunt do ipsum. 
+               Do veniam ex anim irure cillum quis consequat ad irure ex velit cupidatat incididunt. 
+            </P>
+            <button id='select-button' type='button'>SELECT</button>
+         </div>
+      </section>
+
+   </main>
+   <footer>
+      <nav id='nav-footer'>
+         <a class='nav-fot-link' href='#'>Privacy</a>
+         <a class='nav-fot-link' href='#'>Terms</a>
+         <a class='nav-fot-link' href='#'>Contact</a>
+      </nav>
+      <h3>Copyright 2022, My Guitar</h3>
+   </footer>
+</body>
+</html>
